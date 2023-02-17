@@ -4,7 +4,7 @@ import { galleryItems } from './gallery-items.js';
 console.log(galleryItems);
 
 const gallery = document.querySelector('.gallery')
-const items = []
+const newArray = []
 
 galleryItems.forEach(element => {
 	const galleryLink = document.createElement('a')
@@ -17,11 +17,14 @@ galleryItems.forEach(element => {
 	galleryImage.alt = element.description
 
 	galleryLink.append(galleryImage)
-	items.push(galleryLink)
+	newArray.push(galleryLink)
 })
-gallery.append(...items)
+  gallery.append(...newArray)
 
-new SimpleLightbox('.gallery a', {
-	captionDelay: 300,
-  animationSpeed: 200,
-})
+
+
+    new SimpleLightbox('.gallery a', {
+      captionDelay: 250,
+      animationSpeed: 150,
+  })
+
